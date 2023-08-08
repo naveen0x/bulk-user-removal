@@ -1,6 +1,6 @@
 <?php
 // Function to delete selected users in bulk
-function bulk_user_delete_delete_users($user_ids) {
+function bulk_user_removal_delete_users($user_ids) {
     if (!current_user_can('delete_users')) {
         return 0;
     }
