@@ -4,7 +4,7 @@ Plugin Name: Bulk User Removal
 Description: A plugin to search and delete registered users by different criteria.
 Version: 1.0
 Author: Naveen Ranasinghe
-Website: https://www.linkedin.com/in/ranasingheny/
+Website: https://github.com/naveen0x/bulk-user-removal
 */
 
 // Define plugin paths and URLs
