@@ -1,6 +1,6 @@
 <?php
 // Function to handle the search and retrieve matching users
-function bulk_user_delete_search_users() {
+function bulk_user_removal_search_users() {
     $search_results = array();
 
     if (isset($_POST['search_users_btn'])) {
@@ -53,7 +53,7 @@ function bulk_user_delete_search_users() {
 }
 
 // Function to display the search form and search results
-function bulk_user_delete_search_users_page() {
+function bulk_user_removal_search_users_page() {
     // Get the search results when the form is submitted
     $search_results = bulk_user_delete_search_users();
 
