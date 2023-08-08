@@ -1,6 +1,6 @@
 <?php
 // Function to handle the search and retrieve matching users
-function bulk_user_removal_search_users() {
+function bulk_user_removal_plugin_search_users() {
     $search_results = array();
 
     if (isset($_POST['search_users_btn'])) {
@@ -53,13 +53,13 @@ function bulk_user_removal_search_users() {
 }
 
 // Function to display the search form and search results
-function bulk_user_removal_search_users_page() {
+function bulk_user_removal_plugin_search_users_page() {
     // Get the search results when the form is submitted
-    $search_results = bulk_user_delete_search_users();
+    $search_results = bulk_user_removal_plugin_search_users();
 
     // Handle user deletion when "Delete Selected" button is clicked
     if (isset($_POST['delete_users_btn']) && isset($_POST['user_ids']) && is_array($_POST['user_ids'])) {
-        $deleted_count = bulk_user_delete_delete_users($_POST['user_ids']);
+        $deleted_count = bulk_user_removal_plugin_delete_users($_POST['user_ids']);
         if ($deleted_count > 0) {
             echo '<div class="notice notice-success"><p>' . $deleted_count . ' users were successfully deleted.</p></div>';
         }
@@ -67,7 +67,9 @@ function bulk_user_removal_search_users_page() {
 
     // Output the search form
     echo '<div class="wrap">';
-    echo '<h1>User Search</h1>';
+    echo '<h1>Bulk User Removal</h1>';
+    echo '<div class="notice notice-warning"><p><b>Disclaimer:</b>Use this plugin responsibly and ensure you have backups before performing bulk deletions. The authors are not responsible for any data loss or damage caused by using this tool.</p></div>';
+    echo '</br>';
     echo '<form method="post">';
     echo '<input type="hidden" id="user_search_action" value="search_users" />';
     echo '<label for="search_term">Search Term:</label>';
@@ -139,6 +141,8 @@ function bulk_user_removal_search_users_page() {
     } else {
         echo '<p>No users found matching the search criteria.</p>';
     }
+    
+    echo '</br><p>Version 1.0 | <a href="https://www.linkedin.com/in/ranasingheny" target="_blank">Developer</a> | <a href="https://github.com/naveen0x/bulk-user-removal" target="_blank">Github</a></p>';
     
     echo '<script>
             jQuery(document).ready(function($) {
