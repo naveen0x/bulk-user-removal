@@ -6,7 +6,7 @@ Version: 1.0
 Author: Naveen Ranasinghe
 Author URI: https://www.linkedin.com/in/ranasingheny
 Plugin URI: https://github.com/naveen0x/bulk-user-removal
-License: MIT
+License: GPLv2 or later
 License URI: https://github.com/naveen0x/bulk-user-removal/blob/350845e58ebc60e9f6ab31445ff2809b2a1cfc20/LICENSE
 */
 
